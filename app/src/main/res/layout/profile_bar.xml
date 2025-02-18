@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/black">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:id="@+id/arrowCard2"
+        android:gravity="center|left"
+        android:background="@drawable/item_bg"
+        android:focusable="true"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/backArrow2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Go Back"
+            android:tint="#FF006FFA"
+            android:background="@drawable/item_bg"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+</RelativeLayout>

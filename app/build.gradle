@@ -1,0 +1,117 @@
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+
+}
+
+android {
+    namespace 'ge.nikka.packages'
+    compileSdk 34
+    //ext.kotlin_version = '1.9.0'
+    /*lint {
+        baseline = file("lint-baseline.xml")
+    }*/
+    defaultConfig {
+        applicationId "ge.nikka.comu"
+        minSdk 29
+        targetSdk 34
+        versionCode 2312
+        versionName "2.312"
+        
+        vectorDrawables { 
+            useSupportLibrary true
+        }
+        multiDexEnabled false
+    }
+    
+    signingConfigs {
+        config {
+           storeFile file("key.jks")
+           storePassword "unknown"
+           keyAlias "unknown"
+           keyPassword "unknown"
+           enableV1Signing = true
+           enableV2Signing = true
+           enableV3Signing = true
+           enableV4Signing = false
+        }
+    }
+    
+    /*lintOptions {
+        abortOnError false
+    }*/
+    
+    configurations {
+        all {
+           exclude module: 'httpclient'
+           exclude module: 'commons-logging'
+        }
+    }
+    
+    buildTypes {
+        release {
+            minifyEnabled false
+            //signingConfig signingConfigs.config
+            //buildConfigField "String", "KOTLIN_VERSION", "\"1.9.0\""
+            //proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            //signingConfig signingConfigs.config
+            //proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+    
+    packagingOptions {
+        //exclude 'META-INF/DEPENDENCIES'
+        //exclude 'META-INF/LICENSE'
+        //exclude 'META-INF/LICENSE.txt'
+        //exclude 'META-INF/NOTICE'
+        //exclude 'META-INF/NOTICE.txt'
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+}
+
+dependencies {
+    //implementation("ch.acra:acra:4.9.0")
+    implementation("ch.acra:acra-core:5.8.4")
+    implementation("ch.acra:acra-mail:5.8.4")
+    implementation("commons-io:commons-io:2.11.0")
+    implementation("jp.wasabeef:blurry:4.0.1")
+    implementation("com.github.bumptech.glide:glide:4.15.1")
+    implementation 'androidx.core:core-ktx:1.9.0'
+    //implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.0"
+    //implementation "org.jetbrains.kotlin:kotlin-stdlib-common:1.9.0"
+    annotationProcessor("com.github.bumptech.glide:compiler:4.15.1")
+    implementation("com.vdurmont:emoji-java:5.1.1")
+    implementation("com.google.android.gms:play-services-auth:21.1.1")
+    implementation("com.google.firebase:firebase-auth:21.1.0")
+    implementation("com.google.android.gms:play-services-base:18.0.1")
+    implementation("com.google.android.gms:play-services-safetynet:17.0.0")
+    implementation("com.google.android.gms:play-services-fido:21.0.0")
+    implementation("com.google.api-client:google-api-client:1.33.0")
+    implementation("com.google.http-client:google-http-client-jackson2:1.41.5")
+    implementation("com.google.oauth-client:google-oauth-client:1.33.1")
+    implementation("androidx.credentials:credentials:1.3.0")
+    implementation("androidx.credentials:credentials-play-services-auth:1.3.0")
+    implementation("com.google.android.libraries.identity.googleid:googleid:1.1.1")
+    implementation("io.github.aghajari:AXEmojiView:1.5.0")
+    implementation("io.github.aghajari:AXEmojiView-GoogleProvider:1.5.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("androidx.lifecycle:lifecycle-livedata:2.5.1")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("com.google.android.material:material:1.9.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel:2.5.1")
+}

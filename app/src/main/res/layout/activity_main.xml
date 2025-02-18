@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:background="@android:color/black"
+         android:textColor="@android:color/white"
+         android:theme="@style/AppTheme2"
+         android:id="@+id/appbar">
+
+        <com.google.android.material.appbar.MaterialToolbar
+             android:layout_height="60dp"
+             android:layout_width="wrap_content"
+             android:background="@android:color/black"
+             android:textColor="@android:color/white"
+             android:theme="@style/AppTheme2"
+             android:id="@+id/toolbar" />
+
+        
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         app:layout_behavior="@string/appbar_scrolling_view_behavior"
+         android:id="@+id/view_pager" />
+    <com.google.android.material.tabs.TabLayout
+             android:layout_height="56dp"
+             app:tabIndicatorHeight="0dp"
+             android:textSize="24sp"
+             android:layout_width="match_parent"
+             android:background="@android:color/black"
+             android:textColor="@android:color/white"
+             android:theme="@style/AppTheme2"
+             android:layout_gravity="bottom"
+             android:id="@+id/tabs" />
+    
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

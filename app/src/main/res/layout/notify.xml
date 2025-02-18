@@ -1,0 +1,33 @@
+<!-- custom_notification.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/custom_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        />
+
+    <TextView
+        android:id="@+id/custom_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/custom_icon"
+        android:paddingLeft="8dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:paddingTop="2dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/custom_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/custom_title"
+        android:layout_toEndOf="@id/custom_icon"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:paddingLeft="9dp"
+        android:paddingTop="2dp" />
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:paddingTop="16dp"
+    android:paddingRight="14dp"
+    android:paddingLeft="14dp">
+
+    <ge.nikka.packages.ui.main.EditTextCursorWatcher
+        android:id="@+id/userId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="target's username…"
+        android:background="@drawable/edit"
+        android:padding="16dp"
+        android:maxLines="1" />
+
+</LinearLayout>
